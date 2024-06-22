@@ -4,10 +4,11 @@ using namespace std;
 int main(){
     float n1,n2,r;
     char op;
+    bool validacion = true;
 
     cout<<"Ingrese el primer numero: ";cin>>n1;
     cout<<"Ingrese el segundo numero: ";cin>>n2;
-    cout<<"Tienes las siguientes operaciones a elegir: "<<endl;
+    cout<<"Tienes las siguientes operaciones a elegir: ";
     cout<<"Suma (+),    Resta(-),    Multiplicacion(*),     Division(/):  ";cin>>op;
 
     switch (op){
@@ -21,9 +22,17 @@ int main(){
         r = n1 * n2;
         break;
     case '/':
-        r = n1 / n2;
+        if (n2 == 0){
+            cout<<"El numero no puede ser dividido entre 0";
+            validacion = false;
+        }else{
+            r = n1 / n2;
+        }
         break;        
     }
-
+    if (validacion){
     cout<<"El resultado es: "<<r<<endl;    
+    }
+    
+    return 0;
 }
