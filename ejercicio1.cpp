@@ -59,7 +59,7 @@ int main(){
             nuevaOperacion = true; 
         }
 
-    } while (nuevaOperacion == true);
+    } while (nuevaOperacion);
     
     return 0;
 }
