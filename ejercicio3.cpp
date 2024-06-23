@@ -7,10 +7,15 @@ float factorial(int b);
 int main(){
     int n;
     float sum;
-    cout << "Ingrese un numero: "; cin >> n;
 
-    sum = suma(n);
-    cout << sum << endl;
+    cout << "Ingrese un numero: "; cin >> n;
+    if (n <= 0){
+        cout<<"Ingrese solo numeros positivos"<<endl;
+    }else{
+        sum = suma(n);
+
+        cout<<"La suma de la serie es: "<<sum<<endl;
+    }
 
     return 0;
 }
