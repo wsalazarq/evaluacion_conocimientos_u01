@@ -29,9 +29,14 @@ int main(){
             r = n1 / n2;
         }
         break;        
+    default:
+        cout<<"Ingrese una operacion valida";
+        validacion = false;
+        break;
     }
+
     if (validacion){
-    cout<<"El resultado es: "<<r<<endl;    
+        cout<<"El resultado es: "<< r <<endl;    
     }
     
     return 0;
